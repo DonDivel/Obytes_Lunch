@@ -1,0 +1,47 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="lunch__obytes.option">
+      <field name="name">lunch__obytes list</field>
+      <field name="model">lunch__obytes.option</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="description"/>
+
+        </tree>
+      </field>
+    </record>
+   
+
+    <!-- actions opening views on models -->
+  
+    <record model="ir.actions.act_window" id="lunch__obytes.action_window">
+      <field name="name">lunch__obytes window</field>
+      <field name="res_model">lunch__obytes.option</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+ 
+
+    <!-- server action to the one above -->
+
+
+
+    <!-- Top menu item -->
+
+    <menuitem name="lunch__obytes" id="lunch__obytes.menu_root"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Menu 1" id="lunch__obytes.menu_1" parent="lunch__obytes.menu_root"/>
+    <menuitem name="Menu 2" id="lunch__obytes.menu_2" parent="lunch__obytes.menu_root"/>
+
+    <!-- actions -->
+
+    <menuitem name="List" id="lunch__obytes.menu_1_list" parent="lunch__obytes.menu_1"
+              action="lunch__obytes.action_window"/>
+
+
+  </data>
+</odoo>

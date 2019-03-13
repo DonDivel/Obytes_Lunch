@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+        <template id="listing"> 
+          <ul> 
+            <li > 
+              <a> 
+               Test Obytes
+              </a> 
+         </li> 
+         </ul> 
+       </template>
+
+    </data>
+</odoo>
